@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="mx-auto w-75 text-center text-white">
+    <h1>Records</h1>
+    {% if records %}
+        <div class="container ">
+            <div class="row">
+                {% for record in records %}
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title"> {{ record.first_name }} {{ record.last_name }}</h5>
+                                <hr/>
+                                <hr class="w-25 mx-auto"/>
+                                <p>{{ record.address }}</p>
+                                <hr class="w-25 mx-auto"/>
+                                <p>{{ record.city }}</p>
+                                <Button type="button" class="btn btn-secondary">Delete</Button>  
+                                <Button type="button" class="btn btn-secondary">Edit</Button>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+    </div>
+    
+    
+    {% else %}
+    <p>No recods</p>
+    {% endif %}
+</div>
+{% endblock %}

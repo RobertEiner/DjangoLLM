@@ -1,0 +1,53 @@
+{% extends 'base.html' %} {% block content %}
+<div class="text-center mb-3">
+  <h1 class="">Welcome</h1>
+  <h3>What would you like to do?</h3>
+  <div class="container">
+    <div class="row">
+      <div class="col m-2">
+        <div class="card ">
+            <div class="card-body">
+                <p>Ask LLM som questions</p>
+                <button type="button" class="btn btn-success" ><a class=" text-white text-decoration-none" href="{% url 'llm' %}">Ask LLM</a></button>
+            </div>
+
+        </div>
+      </div>
+      <div class="col  m-2 ">
+        <div class="card">
+            <div class="card-body">
+                <p>Check out the items for sale</p>
+                <button type="button" class="btn btn-success" ><a class=" text-white text-decoration-none" href="{% url 'show_items' %}">Show items</a></button>
+
+            </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="row">  
+      <div class="col  m-2">
+        <div class="card">
+            <div class="card-body">
+                <p>Ask LLM2 som questions</p>
+                <button type="button" class="btn btn-success " ><a class=" text-white text-decoration-none" href="{% url 'llm2' %}">Ask LLM2</a></button>
+
+            </div>
+
+        </div>
+      </div>
+      <div class="col  m-2">
+        <div class="card">
+            <div class="card-body">
+                <p>Something else here</p>
+                <button type="button" class="btn btn-success disabled" ><a class=" text-white text-decoration-none" href="{% url 'show_items' %}">Show items</a></button>
+
+            </div>
+
+        </div>
+      </div>
+     
+    </div>
+  </div>
+</div>
+
+{% endblock %}

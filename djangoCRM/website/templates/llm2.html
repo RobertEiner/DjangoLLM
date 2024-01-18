@@ -1,0 +1,39 @@
+{% extends 'base.html' %} {% block content %}
+<div class="container mx-auto flex">
+  <div class="row">
+    <div class="col">
+      <div class="card w-50">
+        <div class="card-body">
+          <h2>LLM2: Ask me anything</h2>
+          <form action="" method="get">
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label"
+                >Input textarea</label
+              >
+              <textarea
+                class="form-control"
+                name="input"
+                id="input"
+                rows="3"
+              ></textarea>
+            </div>
+            <input type="hidden" name="generate" value="generate" />
+            <input
+              type="submit"
+              class="btn btn-primary"
+              value="Generate response"
+              name="mybtn"
+            />
+          </form>
+        </div>
+        {% if response2 %}
+        <div class="w-75 mx-auto">
+            <hr class="w-75 mx-auto">
+          <p>{{ response2 }}</p>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

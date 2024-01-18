@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-lg ">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" href="{% url 'home' %}">Home</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active text-white" href="{% url 'add_item' %}" aria-current="page" href="#">Add Item</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="{% url 'add_record' %}">Add record</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="{% url 'show_records' %}" aria-current="page">
+              Show records
+            </a>
+            
+          </li>
+         
+        
+         
+        </ul>
+       
+      </div>
+    </div>
+  </nav>
